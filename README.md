@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Routes
+
+LOGIN: /auth/login
+FORGOT_PASSWORD: /auth/forgot-password
+RESET_PASSWORD: /auth/reset-password
+REGISTRATION: /auth/registration
+
 ## Available Scripts
 
 In the project directory, you can run:
