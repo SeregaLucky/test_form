@@ -8,9 +8,9 @@ import styles from './Input.module.scss';
 /**
  * @param {Object} props - props for component
  * @param {string} [props.type='text'] - type input: "text" | "password"
- * @param {string} props.id - uniq id
+ * @param {string} [props.id=undefined] - uniq id
  * @param {string} props.placeholder - text for placeholder
- * @param {boolean} props.autoFocus - should I enable autofocus or not?
+ * @param {boolean} [props.autoFocus=false] - should I enable autofocus or not?
  * @param {object} props.register - object from react-hook-form
  * @param {object} props.error - object error
  */
@@ -18,11 +18,11 @@ const Input = ({
   type = 'text',
   id,
   placeholder,
-  autoFocus,
+  autoFocus = false,
   register,
   error,
 }) => {
-  const [isShowPassword, setIsShowPassword] = useState(true);
+  const [isShowPassword, setIsShowPassword] = useState(false);
 
   const isPasswordInput = type === 'password';
 

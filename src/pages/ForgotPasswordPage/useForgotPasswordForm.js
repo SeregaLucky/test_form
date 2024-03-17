@@ -9,6 +9,7 @@ import ENDPOINTS from 'services/apiConstants';
 import { Urls } from 'helpers/urls';
 import { noticeError, noticeSuccess } from 'helpers/showNotices';
 import { YupMesses } from 'helpers/helpersYup';
+import { currentRedirectUrl } from 'helpers/checkEnv';
 
 const schema = yup.object({
   email: yup
@@ -26,6 +27,7 @@ export const useForgotPasswordForm = () => {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
     mode: 'onSubmit',
@@ -41,18 +43,22 @@ export const useForgotPasswordForm = () => {
         url: ENDPOINTS.AUTH.FORGOT_PASSWORD,
         data: {
           email,
-          redirect_url:
-            process.env.REACT_APP_BASE_LOCAL_URL + Urls.getResetPasswordURL(),
+          redirect_url: currentRedirectUrl + Urls.getResetPasswordURL(),
         },
       });
 
       noticeSuccess(detail);
     } catch (error) {
-      error.response.data.detail.forEach((detailError) => {
-        noticeError(detailError.error);
-      });
+      const { detail } = error.response.data;
+
+      if (Array.isArray(detail)) {
+        detail.forEach((detailError) => noticeError(detailError.error));
+      } else {
+        noticeError(detail);
+      }
     } finally {
       setIsLoading(false);
+      reset();
     }
   };
 

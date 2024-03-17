@@ -20,8 +20,8 @@ const schema = yup.object({
     .required(YupMesses.REQUIRED('Password'))
     .min(MIN_PASSWORD_LENGTH, YupMesses.MIN_STR(MIN_PASSWORD_LENGTH))
     .matches(/\d/, YupMesses.MIN_ONE_NUMERIC)
-    .matches(/[A-Z]/, YupMesses.MIN_ONE_UPPERCASE_LETTER)
-    .matches(/[a-z]/, YupMesses.MIN_ONE_LOWERCASE_LETTER)
+    .matches(/\p{Lu}/u, YupMesses.MIN_ONE_UPPERCASE_LETTER)
+    .matches(/\p{Ll}/u, YupMesses.MIN_ONE_LOWERCASE_LETTER)
     .default(''),
 
   confirmPassword: yup
@@ -44,6 +44,7 @@ export const useResetPasswordForm = () => {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
     mode: 'onSubmit',
@@ -70,6 +71,7 @@ export const useResetPasswordForm = () => {
       noticeError(error.response.data.detail);
     } finally {
       setIsLoading(false);
+      reset();
     }
   };
 

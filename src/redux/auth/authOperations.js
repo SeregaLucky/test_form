@@ -1,7 +1,9 @@
 import { noticeError } from 'helpers/showNotices';
-import { makeRequest } from '../../services/makeRequest';
+
 import authActions from './authActions';
+
 import ENDPOINTS from 'services/apiConstants';
+import { makeRequest } from 'services/makeRequest';
 
 const loginUser = (params) => async (dispatch) => {
   dispatch(authActions.loginUserStart());
@@ -14,12 +16,12 @@ const loginUser = (params) => async (dispatch) => {
       data: { email, password },
     });
 
-    // access_token token_expire refresh_token refresh_token_expire
-
     dispatch(
       authActions.loginUserSuccess({
         accessToken: currentUser.access_token,
+        tokenExpire: currentUser.token_expire,
         refreshToken: currentUser.refresh_token,
+        refresh_token_expire: currentUser.refresh_token_expire,
       }),
     );
   } catch (error) {

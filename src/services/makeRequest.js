@@ -3,7 +3,7 @@ import axios from 'axios';
 axios.defaults.baseURL = process.env.REACT_APP_BASE_API_URL;
 
 /**
- * Выполняет асинхронный HTTP-запрос с помощью библиотеки axios.
+ * Makes an asynchronous HTTP request using the axios library
  * @async
  * @function makeRequest
  * @param {Object} options - request parameters

@@ -31,14 +31,16 @@ export const useLoginForm = () => {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm({
     resolver: yupResolver(schema),
     mode: 'onSubmit',
   });
 
   /* METHOD */
-  const onSubmit = ({ email, password }) => {
-    dispatch(authOperations.loginUser({ email, password }));
+  const onSubmit = async ({ email, password }) => {
+    await dispatch(authOperations.loginUser({ email, password }));
+    reset();
   };
 
   return {

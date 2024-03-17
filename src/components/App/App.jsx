@@ -1,6 +1,6 @@
-import styles from "./App.module.scss";
+import { useRoutesConstants } from 'hooks/useRoutesConstants';
 
-import { useRoutesConstants } from "hooks/useRoutesConstants";
+import styles from './App.module.scss';
 
 const App = () => {
   const routes = useRoutesConstants();
