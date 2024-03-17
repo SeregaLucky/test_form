@@ -8,10 +8,10 @@ Project link: https://zingy-cendol-83020a.netlify.app
 
 ## Routes
 
-LOGIN: /auth/login \
-FORGOT_PASSWORD: /auth/forgot-password \
-RESET_PASSWORD: /auth/reset-password \
-REGISTRATION: /auth/registration
+LOGIN: https://zingy-cendol-83020a.netlify.app/auth/login \
+FORGOT_PASSWORD: https://zingy-cendol-83020a.netlify.app/auth/forgot-password \
+RESET_PASSWORD: https://zingy-cendol-83020a.netlify.app/auth/reset-password \
+REGISTRATION: https://zingy-cendol-83020a.netlify.app/auth/registration
 
 ## Available Scripts
 
