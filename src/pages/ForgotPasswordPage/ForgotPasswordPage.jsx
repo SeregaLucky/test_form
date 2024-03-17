@@ -19,7 +19,6 @@ const ForgotPasswordPage = () => {
         <Input
           type="text"
           placeholder="Enter your email"
-          autoFocus
           register={register('email')}
           error={errors.email}
         />

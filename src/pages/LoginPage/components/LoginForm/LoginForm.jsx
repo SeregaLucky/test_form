@@ -18,7 +18,6 @@ const LoginForm = () => {
         <Input
           type="text"
           placeholder="Work email"
-          autoFocus
           register={register('email')}
           error={errors.email}
         />

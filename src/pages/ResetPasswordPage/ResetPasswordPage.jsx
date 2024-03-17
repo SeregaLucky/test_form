@@ -17,7 +17,6 @@ const ResetPasswordPage = () => {
             labelText="Password"
             type="password"
             placeholder="Password"
-            autoFocus
             register={register('password')}
             error={errors.password}
           />
