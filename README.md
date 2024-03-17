@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 LOGIN: /auth/login \
 FORGOT_PASSWORD: /auth/forgot-password \
 RESET_PASSWORD: /auth/reset-password \
-REGISTRATION: /auth/registration \
+REGISTRATION: /auth/registration
 
 ## Available Scripts
 
