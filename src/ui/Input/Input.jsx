@@ -29,7 +29,9 @@ const Input = ({
   return (
     <div className={styles.container}>
       <input
-        className={cn(styles.inputAuth, { [styles.password]: isPasswordInput })}
+        className={cn(styles.customInput, {
+          [styles.password]: isPasswordInput,
+        })}
         type={isPasswordInput && isShowPassword ? 'text' : type}
         id={id}
         placeholder={placeholder}
@@ -39,13 +41,13 @@ const Input = ({
 
       {isPasswordInput && (
         <button
-          className={cn(styles.buttonShowPass, {
-            [styles.closeEye]: isShowPassword,
-          })}
+          className={styles.buttonShowPass}
           type="button"
           onClick={() => setIsShowPassword(!isShowPassword)}
         >
-          <EyeIcon />
+          <span className={cn({ [styles.closeEye]: isShowPassword })}>
+            <EyeIcon />
+          </span>
         </button>
       )}
 

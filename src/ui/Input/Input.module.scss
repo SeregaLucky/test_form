@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.inputAuth {
+.customInput {
   width: 100%;
   height: 48px;
   font-size: 15px;
@@ -11,7 +11,7 @@
   border: 1px solid var(--color-second);
 
   &.password {
-    padding: 0 36px 0 12px;
+    padding: 0 52px 0 12px;
   }
 
   &::placeholder {
@@ -22,27 +22,35 @@
 .buttonShowPass {
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 0;
   transform: translateY(-50%);
 
   border: none;
   background-color: transparent;
+  height: 100%;
+  padding: 0 16px;
 
   svg {
     display: block;
   }
 
-  &.closeEye {
-    &::after {
-      content: '';
+  span {
+    position: relative;
 
-      position: absolute;
-      left: 0;
-      top: 6px;
-      width: 100%;
-      height: 2px;
-      background-color: #67717b;
-      transform: rotate(45deg);
+    display: block;
+
+    &.closeEye {
+      &::after {
+        content: '';
+
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 100%;
+        height: 2px;
+        background-color: #67717b;
+        transform: rotate(45deg);
+      }
     }
   }
 }
