@@ -4,10 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Routes
 
-LOGIN: /auth/login
-FORGOT_PASSWORD: /auth/forgot-password
-RESET_PASSWORD: /auth/reset-password
-REGISTRATION: /auth/registration
+LOGIN: /auth/login \
+FORGOT_PASSWORD: /auth/forgot-password \
+RESET_PASSWORD: /auth/reset-password \
+REGISTRATION: /auth/registration \
 
 ## Available Scripts
 
