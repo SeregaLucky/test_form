@@ -1,0 +1,44 @@
+.controllersSocial {
+  display: flex;
+  gap: 16px;
+
+  margin-bottom: 30px;
+}
+
+.socialContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    display: block;
+    margin-right: 10px;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-fifth);
+  }
+}
+
+.containerLines {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  span {
+    padding: 0 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-third);
+  }
+}
+
+.line {
+  flex-grow: 1;
+
+  height: 1px;
+  background-color: var(--color-fourth);
+}

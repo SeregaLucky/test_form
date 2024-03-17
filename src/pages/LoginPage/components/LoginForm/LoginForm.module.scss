@@ -1,0 +1,21 @@
+.loginForm {
+  margin-bottom: 20px;
+}
+
+.containerInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  margin-bottom: 15px;
+}
+
+.forgotPasswordLink {
+  display: block;
+  text-align: end;
+
+  color: var(--color-first);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}

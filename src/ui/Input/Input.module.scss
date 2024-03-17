@@ -1,0 +1,57 @@
+.container {
+  position: relative;
+}
+
+.inputAuth {
+  width: 100%;
+  height: 48px;
+  font-size: 15px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-second);
+
+  &.password {
+    padding: 0 36px 0 12px;
+  }
+
+  &::placeholder {
+    color: var(--color-placeholder);
+  }
+}
+
+.buttonShowPass {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+
+  border: none;
+  background-color: transparent;
+
+  svg {
+    display: block;
+  }
+
+  &.closeEye {
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 100%;
+      height: 2px;
+      background-color: #67717b;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.errorMessage {
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  font-size: 14px;
+
+  color: var(--color-error);
+}

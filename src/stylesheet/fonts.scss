@@ -1,0 +1,45 @@
+/* @import './fonts'; */
+
+/* BasisGrotesquePro - normal */
+@font-face {
+  font-display: swap;
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/BasisGrotesqueProNormal/BasisGrotesquePro-Regular.woff2')
+      format('woff2'),
+    url('../assets/fonts/BasisGrotesqueProNormal/BasisGrotesquePro-Regular.woff')
+      format('woff'),
+    url('../assets/fonts/BasisGrotesqueProNormal/BasisGrotesquePro-Regular.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+/* BasisGrotesquePro - medium */
+@font-face {
+  font-display: swap;
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/BasisGrotesqueProMedium/BasisGrotesquePro-Medium.woff2')
+      format('woff2'),
+    url('../assets/fonts/BasisGrotesqueProMedium/BasisGrotesquePro-Medium.woff')
+      format('woff'),
+    url('../assets/fonts/BasisGrotesqueProMedium/BasisGrotesquePro-Medium.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+/* BasisGrotesquePro - black */
+@font-face {
+  font-display: swap;
+  font-family: 'Basis Grotesque Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../assets/fonts/BasisGrotesqueProBlack/BasisGrotesquePro-Black.woff2')
+      format('woff2'),
+    url('../assets/fonts/BasisGrotesqueProBlack/BasisGrotesquePro-Black.woff')
+      format('woff'),
+    url('../assets/fonts/BasisGrotesqueProBlack/BasisGrotesquePro-Black.ttf')
+      format('truetype'); /* Safari, Android, iOS */
+}
+
+/* 400 500 700 */
