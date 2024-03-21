@@ -27,6 +27,7 @@ const loginUser = (params) => async (dispatch) => {
   } catch (error) {
     noticeError(error.response.data.detail);
     dispatch(authActions.loginUserFailure(error));
+    throw new Error(error);
   }
 };
 

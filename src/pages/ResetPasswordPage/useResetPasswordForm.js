@@ -66,12 +66,12 @@ export const useResetPasswordForm = () => {
         },
       });
 
+      reset();
       noticeSuccess(detail);
     } catch (error) {
       noticeError(error.response.data.detail);
     } finally {
       setIsLoading(false);
-      reset();
     }
   };
 

@@ -39,8 +39,11 @@ export const useLoginForm = () => {
 
   /* METHOD */
   const onSubmit = async ({ email, password }) => {
-    await dispatch(authOperations.loginUser({ email, password }));
-    reset();
+    try {
+      await dispatch(authOperations.loginUser({ email, password }));
+      reset();
+      /* Redirect to the main or private page */
+    } catch {}
   };
 
   return {

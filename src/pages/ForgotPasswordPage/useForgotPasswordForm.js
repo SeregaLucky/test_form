@@ -47,6 +47,7 @@ export const useForgotPasswordForm = () => {
         },
       });
 
+      reset();
       noticeSuccess(detail);
     } catch (error) {
       const { detail } = error.response.data;
@@ -58,7 +59,6 @@ export const useForgotPasswordForm = () => {
       }
     } finally {
       setIsLoading(false);
-      reset();
     }
   };
 
